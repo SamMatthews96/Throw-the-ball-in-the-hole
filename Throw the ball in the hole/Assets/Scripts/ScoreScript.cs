@@ -12,7 +12,7 @@ public class ScoreScript : MonoBehaviour
 
     public void IncreaseScore(int delta)
     {
-        score += 1;
+        score += delta;
         scoreText.text = "Score: " + score;
     }
 }

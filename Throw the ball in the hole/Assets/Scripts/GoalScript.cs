@@ -6,6 +6,7 @@ public class GoalScript : MonoBehaviour
 {
     public ScoreScript score;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +23,16 @@ public class GoalScript : MonoBehaviour
     {
         Destroy(collision.gameObject);
         score.IncreaseScore(1);
+        RandomisePosition();
     }
+
+    private void RandomisePosition()
+    {
+        float x = Random.Range(-2f, 7f);
+        float y = Random.Range(-4f, 3.5f);
+        gameObject.transform.position = new Vector2(x,y);
+
+    }
+
+    
 }
